@@ -1,44 +1,121 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Personal Start Page">
+    <meta name="author" content="Joe Roode">
 	
-    <title>Home</title>
+    <title>Start Page</title>
 	<link href="lib/bootstrap.min.css" rel="stylesheet">	
 	<link href="style.css" rel="stylesheet">	
   </head>
 
   <body class="text-center">
 
-	<h1 class="hello">Hello !</h1>
-	<h1 id="time" class="timing"></h1>
+	<h1 id="date" class="date"></h1>
+	<script>
+	var d2 = new Date();
+	var dd = d2.getDate();
+	var mm = d2.getMonth();
+	
+	var weekday = new Array(7);
+	weekday[0] = "Sunday";
+	weekday[1] = "Monday";
+	weekday[2] = "Tuesday";
+	weekday[3] = "Wednesday";
+	weekday[4] = "Thursday";
+	weekday[5] = "Friday";
+	weekday[6] = "Saturday";
+
+	var n = weekday[d2.getDay()];
+
+	var month = new Array(12);
+	month[0] = "Jan"
+	month[1] = "Feb"
+	month[2] = "Mar"
+	month[3] = "April"
+	month[4] = "May"
+	month[5] = "June"
+	month[6] = "July"
+	month[7] = "Aug"
+	month[8] = "Sept"
+	month[9] = "Oct"
+	month[10] = "Nov"
+	month[11] = "Dec"
+
+	var nn = month[d2.getMonth()];
+
+	document.getElementById("date").innerHTML = n + ",  " + nn + "  " + dd;
+	</script>
+	
+	<h1 id="time" class="time"></h1>
+	<script>
+	function time() {
+	var ut = new Date();
+	document.getElementById("time").innerHTML = ut.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+	}
+	setInterval(time, 1000);
+	</script>
+	
 	<div class="search">
 		<form action="https://www.google.com/search" method="get" target="_blank" autocomplete="off">
 			<input type="text" name="q" placeholder="Search">
 		</form>
 	</div>
 	<div class="icons">
+		<a href="https://gmail.com">
+			<img src="ico/01.png">
+		</a>
+		<a href="https://home.nest.com">
+			<img src="ico/02.png">
+		</a>
+		<a href="https://netflix.com">
+			<img src="ico/03.png">
+		</a>
+		<a href="https://www.amazon.com/Prime-Video/b?ie=UTF8&node=2676882011">
+			<img src="ico/04.png">
+		</a>
+		<a href="https://old.reddit.com/r/all">
+			<img src="ico/05.png">
+		</a>
+	</div>
+	<div class="icons">
+		<a href="https://mobile.weather.gov/index.php?lat=37.7&lon=-106.58">
+			<img src="ico/06.png">
+		</a>
+		<a href="http://127.0.0.1:32400/web/index.html">
+			<img src="ico/07.png">
+		</a>
+		<a href="https://www.hbomax.com/">
+			<img src="ico/08.jpg">
+		</a>
+		<a href="http://televiso.net/v2l">
+			<img src="ico/09.png"> 
+		</a>
+		<a href="https://www.facebook.com">
+			<img src="ico/10.png">
+		</a>
+	</div>
+	<div class="icons">
+		<a href="https://www.cotrip.org/map.htm">
+			<img src="ico/11.png">
+		</a>
+		<a href="http://192.168.1.210/admin/">
+			<img src="ico/12.png">
+		</a>
+		<a href="https://hulu.com">
+			<img src="ico/13.png">
+		</a>
 		<a href="https://youtube.com">
-			<img src="img/1.png"> Youtube 
+			<img src="ico/14.png">
 		</a>
-		<a href="https://github.com">
-			<img src="img/2.png"> Github 
-		</a>
-		<a href="https://spotify.com">
-			<img src="img/3.png"> Spotify 
-		</a>
-		<a href="https://twitch.com">
-			<img src="img/4.png"> Twitch 
-		</a>
-		<a href="https://reddit.com">
-			<img src="img/5.png"> Reddit
+		<a href="https://instagram.com">
+			<img src="ico/15.png">
 		</a>
 	</div>
     
     <script src="lib/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="time.js"></script>
 	<script src="lib/jquery-3.2.1.slim.min.js?version=4"></script>
   
 

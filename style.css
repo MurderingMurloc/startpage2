@@ -13,9 +13,9 @@ body {
           rgba(0, 0, 0, 0.5), 
           rgba(0, 0, 0, 0.5)
         ),
-		url('img/bg.jpg');
+		url('img/bg02.jpg');
 	background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     background-position: center top;
     background-attachment: fixed;
 	background-color: #333;
@@ -28,12 +28,14 @@ a, a:hover, a:focus, a:active, a:visited {
 	color: #fff;
 }
 
-h1.hello {
-	margin-top: 270px;
+h1.date {
+	margin-top: 90px;
+	font-size: 3.2rem;
+	
 }
 
-h1.hello, h1.timing {
-	margin-bottom: 85px;
+h1.time {
+	margin-bottom: 220px;
 	font-size: 3.2rem;
 }
 
@@ -49,13 +51,14 @@ input {
 }
 
 .icons img {
+	padding-bottom: 20px;
 	position: relative;
-	height: 20px;
+	height: 100px;
 	width: auto;
 	top: -2px;
 }	
 .icons a:not(:last-of-type) {
-	padding-right: 20px;	
+	padding-right: 20px;
 }	
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
