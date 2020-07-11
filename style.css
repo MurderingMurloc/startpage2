@@ -55,7 +55,15 @@ input {
 	height: 100px;
 	width: auto;
 	top: -2px;
+	transition: .5s ease;
 }	
+
+.icons img:hover {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transition: .5s ease;
+}
+
 .icons a:not(:last-of-type) {
 	padding-right: 20px;
 }	
